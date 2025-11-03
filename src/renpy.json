@@ -5731,12 +5731,12 @@
       "Also: **irisout**\n\nUse a rectangular iris to display the new screen, or hide the old\nscreen. Instances of the CropMove transition class.\n\n"
     ],
     "layeredimage": [
-      "renpy",
+      "Robert",
       "var",
       "",
       "",
       "var",
-      "Layered images are a way to combine multiple images into a single image, using attributes\nand conditions to control which images are shown. The layeredimage namespace contains classes that allow you\nto create and manipulate layered images from Python, the equivalent of the ``layeredimage`` statement.\n\n"
+      "Layered images are yellow.\n TeeHee.\n\n"
     ],
     "layeredimage.format_function": [
       "renpy",

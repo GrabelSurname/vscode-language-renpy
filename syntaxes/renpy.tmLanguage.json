@@ -229,7 +229,7 @@
         {
           "comment": "Control flow keywords",
           "name": "keyword.control.flow.renpy",
-          "match": "\\b(?<!\\.)(?:pass|return|pause|if|elif|else|while|for)\\b"
+          "match": "\\b(?<!\\.)(?:pass|return|pause|if|elif|else|while|for|testicle)\\b"
         },
         {
           "comment": "Python statement keywords",
@@ -1142,7 +1142,6 @@
         { "include": "#with-statement" }
       ]
     },
-
     "builtin-labels": {
       "name": "support.function.builtin.renpy",
       "match": "(?<!\\.)\\b(?:start|quit|after_load|splashscreen|before_main_menu|main_menu|after_warp|hide_windows)\\b"
@@ -1194,7 +1193,7 @@
     },
     "label": {
       "name": "meta.label.statement.renpy",
-      "match": "(?<=^[ \\t]*)(label)\\b[ \\t]*(.*?)(?:[ \\t]*(hide))?(:)",
+      "match": "(?<=^[ \\t]*)(label|always|attribute)\\b[ \\t]*(.*?)(?:[ \\t]*(hide|default))?(:)",
       "captures": {
         "1": { "name": "storage.type.function.label.renpy" },
         "2": {
@@ -1202,6 +1201,25 @@
         },
         "3": { "name": "keyword.hide.renpy" },
         "4": { "name": "punctuation.section.label.begin.renpy" }
+      }
+    },
+    "layeredimage-name": {
+      "patterns": [
+        {
+          "name": "entity.name.function.layeredimage.renpy",
+          "match": "\\b(?:[a-zA-Z_]\\w*)\\b"
+        }
+      ]
+    },
+    "layeredimage": {
+      "name": "meta.layeredimage.statement.renpy",
+      "match": "(?<=^[ \\t]*)(layeredimage)\\b[ \\t]*(.*?)(?:[ \\t]*(default))?(:)",
+      "captures": {
+        "1": { "name": "storage.type.function.layeredimage.renpy" },
+        "2": {
+          "patterns": [ { "include": "#layeredimage-name" }, { "include": "source.renpy.python#parameters" }, { "include": "#invalid-token" } ]
+        },
+        "3": { "name": "keyword.default.renpy" }
       }
     },
     "return-statements": {
@@ -1479,7 +1497,8 @@
         { "include": "source.renpy.style#style" },
         { "include": "#return-statements" },
         { "include": "#jump" },
-        { "include": "#call" }
+        { "include": "#call" },
+        { "include": "#layeredimage"}
       ]
     },
     "base-patterns": {

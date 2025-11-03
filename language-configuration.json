@@ -60,7 +60,7 @@
   "onEnterRules": [
     // Renpy keywords
     {
-      "beforeText": "^[ \\t]*(?:image|init|label|menu|python|scene|screen|transform)\\b.*?:[ \\t]*$",
+      "beforeText": "^[ \\t]*(?:image|init|label|menu|python|scene|screen|transform|layeredimage|always|attribute)\\b.*?:[ \\t]*$",
       "action": { "indent": "indent" }
     },
     // Outdent keywords
