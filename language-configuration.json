@@ -60,12 +60,12 @@
   "onEnterRules": [
     // Renpy keywords
     {
-      "beforeText": "^[ \\t]*(?:image|init|label|menu|python|scene|screen|transform|layeredimage|always|attribute)\\b.*?:[ \\t]*$",
+      "beforeText": "^[ \\t]*(?:image|init|label|menu|python|scene|screen|transform|layeredimage|always|attribute|imagebutton)\\b.*?:[ \\t]*$",
       "action": { "indent": "indent" }
     },
     // Outdent keywords
     {
-      "beforeText": "^[ \\t]*(?:pass|return|repeat)\\b.*?$",
+      "beforeText": "^[ \\t]*(?:pass|return|repeat|action)\\b.*?$",
       "action": { "indent": "outdent" }
     },
     // For menu's
